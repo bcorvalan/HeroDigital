@@ -1,0 +1,17 @@
+.success {
+  &__wrapper {
+    @include pageWrapper;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    .action__submit{
+        margin-top: 25px;
+        @include button;
+        background-color: $purple-color;
+    }
+  }
+  &__msg {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+}

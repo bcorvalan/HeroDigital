@@ -1,0 +1,187 @@
+.signup-form {
+  &__wrapper {
+    @include pageWrapper;
+  }
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  &__description {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 20px 0px 40px 0px;
+  }
+  &__row {
+    display: grid;
+    align-items: end;
+    grid-template-columns: 48% 48%;
+    grid-gap: 4%;
+    margin-top: 1.8rem;
+    @include small-size {
+      grid-template-columns: 100%;
+      grid-gap: unset;
+      margin-top: unset;
+    }
+  }
+  &__col {
+    @include small-size {
+      margin-top: 20px;
+    }
+  }
+  .input {
+    &__error-msg {
+      @include errorMessage;
+      margin-bottom: 15px;
+    }
+    &-text__field {
+      display: grid;
+      margin-top: 15px;
+    }
+    &-text {
+      border: 3px solid $boder-input-color;
+      padding: 15px;
+      box-shadow: 0 4px 6px 1px rgb(0 0 0 / 50%);
+      &--error {
+        @include errorInput;
+      }
+    }
+    &-text:focus {
+      outline: none;
+      border: 3px solid $boder-input-color-active;
+      box-shadow: 0 4px 6px 1px rgb(0 0 0 / 50%);
+    }
+    &-text--error:focus {
+      @include errorInput;
+    }
+    &-select--error {
+      @include errorInput;
+    }
+    &-text:disabled {
+      outline: none;
+      border: 3px solid $boder-input-color-disabled;
+      box-shadow: 0 4px 6px 1px rgb(0 0 0 / 50%);
+      background-color: $background-input-color-disabled;
+    }
+    &-text__label,
+    &-checkbox__label {
+      @include labelInput;
+    }
+    &-checkbox__label {
+      margin-left: 25px;
+    }
+  }
+  .select {
+    &__col {
+      width: 50%;
+      @include small-size {
+        width: 100%;
+      }
+    }
+    &__label {
+      @include labelInput;
+      margin: 10px 0;
+    }
+  }
+  &__action {
+    grid-template-columns: 48% 48%;
+    grid-gap: 4%;
+    display: grid;
+    width: 50%;
+    margin-top: 100px;
+    @include small-size {
+      grid-template-columns: 100%;
+      grid-gap: unset;
+      width: 100%;
+      margin-top: 50px;
+    }
+    .action {
+      &__submit,
+      &__rest {
+        @include button;
+        @include small-size {
+          margin-top: 25px;
+        }
+      }
+      &__submit {
+        background-color: $purple-color;
+      }
+      &__rest {
+        background-color: #fff;
+        color: #454545;
+      }
+    }
+  }
+  &__error-msg {
+    background: $background-color-error;
+    color: #454545;
+    padding: 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    border: 2px solid $boder-color-error;
+  }
+  .checkbox {
+    &:before,
+    &:after {
+      box-sizing: border-box;
+      line-height: 1;
+    }
+    display: flex;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #454545;
+    font-weight: 500;
+    cursor: pointer;
+    align-items: center;
+
+    &__label {
+      line-height: 1;
+      font-size: 16px;
+      padding-top: 4px;
+      position: relative;
+      margin-left: 20px;
+      
+    }
+    &__control {
+      display: inline-grid;
+      width: 1.8rem;
+      height: 1.8rem;
+      transform: translateY(-0.05em);
+      background-color: #fff;
+      border: 3px solid $boder-input-color;
+      -webkit-box-shadow: 0 4px 6px 1px rgb(0 0 0 / 50%);
+      box-shadow: 0 4px 6px 1px rgb(0 0 0 / 50%);
+      svg {
+        color: #fff;
+        transform: scale(0);
+      }
+    }
+
+    &__input {
+      display: grid;
+      grid-template-areas: "checkbox";
+
+      > * {
+        grid-area: checkbox;
+      }
+      input {
+        opacity: 0;
+        width: 1.8rem;
+        height: 1.8rem;
+        &:focus + .checkbox__control {
+          box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.1em currentColor;
+        }
+      }
+    }
+
+    &__input input:checked + &__control svg {
+      transform: scale(1);
+      background-color: #803093;
+    }
+
+    &__input input:checked + &__control {
+      border-color: #803093;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+}

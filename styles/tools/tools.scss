@@ -1,0 +1,55 @@
+/*
+=====================================
+  MIXINS AND FUNCTIONS STYLES
+=====================================
+*/
+
+@mixin pageWrapper {
+  background: $background-img;
+  margin: 50px;
+  max-width: 1140px;
+  padding: 30px;
+  @include small-size {
+    margin: unset;
+  }
+}
+
+@mixin errorMessage {
+  color:#ee5071;
+  font-size: 1rem;
+  font-style: italic;  
+}
+
+@mixin labelInput{
+  text-transform: uppercase;
+  font-size: 1rem;
+  color:#454545;
+  font-weight: 500;
+}
+
+@mixin errorInput{
+  outline: none;
+  border: 3px solid $boder-color-error;
+  background-color: $background-color-error;
+}
+
+@mixin button {
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    width: 100%;
+    font-weight: 500;
+    font-size:1rem;
+    margin-right: 30px;
+    min-height: 53px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px 1px rgb(0 0 0 / 50%);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+//Media Query
+
+@mixin small-size {
+  @media (max-width: 768px) { @content; }
+}
