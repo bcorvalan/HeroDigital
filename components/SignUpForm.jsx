@@ -155,10 +155,10 @@ export default function SignUpForm() {
           </div>
         </div>
         <div className="signup-form__action">
-          <button className="action__submit" type="submit">
+          <button disabled = {disabled} className="action__submit" type="submit">
             Submit
           </button>
-          <button className="action__rest" type="reset">
+          <button disabled = {disabled} className="action__rest" type="reset">
             Reset
           </button>
         </div>
