@@ -1,5 +1,5 @@
 import React from 'react'
-import ChevronIcon from '../components/icons/CheckIcon'
+import ChevronIcon from '../components/icons/ChevronIcon'
 import { components } from "react-select";
 
 export default function DropdownIndicator(props) {

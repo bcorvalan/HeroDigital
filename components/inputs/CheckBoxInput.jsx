@@ -21,7 +21,7 @@ export default function CheckBoxInput({
           />
           <span
             className={
-              errors[data.name] ? "checkbox__control error" : "checkbox__control"
+              errors[data.name] ? "checkbox__control error checkbox__control--error" : "checkbox__control"
             }
           >
             <CheckIcon />

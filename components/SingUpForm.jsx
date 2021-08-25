@@ -32,7 +32,7 @@ export default function SingUpForm() {
       });
       const message = await response.json();
       setLoding(false);
-      window.scrollTo( 0, 0 );
+      window.scrollTo(0, 0);
       response.ok ? router.push("/success") : setError(message.message);
     } catch (err) {
       console.log(err);
