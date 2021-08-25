@@ -1,4 +1,4 @@
-# Hero Digital - React js Challenge
+## Hero Digital - React js Challenge
 
 This is a test code  requested by [Hero Digital](https://herodigital.com/)
 
