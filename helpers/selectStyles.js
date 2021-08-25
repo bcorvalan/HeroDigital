@@ -1,3 +1,9 @@
+/*
+=====================================
+SELECT CUSTOM STYLES
+=====================================
+*/
+
 export const selectStyles = {
   indicatorSeparator: () => {},
   container: (styles, state) => ({

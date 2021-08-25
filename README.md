@@ -1,4 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hero Digital - React js Challenge
+
+This is a test code  requested by [Hero Digital](https://herodigital.com/)
+
+## Introduction
+The following technologies were used for this project:
+- [Next.js](https://nextjs.org/) server-side project
+- [SASS](https://sass-lang.com/) CSS preprocessor
+- [ITCSS](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) Scalable and Maintainable CSS Architecture
+- [React Hook Form](https://react-hook-form.com/) Performant, flexible and extensible forms with easy-to-use validation.
+
+WCAG (Website Accessibility) testing with WCAG - Contrast checker (Chrome extension) 
 
 ## Getting Started
 
@@ -10,23 +21,11 @@ $ npm install && npm start
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Deployed on Vercel
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+[Code working example](https://hero-digital.vercel.app/)
 
-## Learn More
+## Comments
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Normally, Next.js tends to use npm start for productive environments, where it is necessary to run npm run build beforehand. In this case the requirements asked only to run npm install and npm start to be able to run, which is why I chose to change npm start to run the development environment. In a productive environment it is recommended to configure the package.json similar to https://nextjs.org/docs#manual-setup

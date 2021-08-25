@@ -9,19 +9,20 @@ import Select from "react-select";
 import DropdownIndicator from "./DropdownIndicator";
 import ErrorMessage from "./ErrorMessage";
 
-export default function SingUpForm() {
+export default function SignUpForm() {
   const [error, setError] = useState(null);
-  const [loading, setLoding] = useState(null);
+  const [loading, setLoading] = useState(null);
   const {
     register,
     handleSubmit,
     control,
     formState: { errors },
   } = useForm();
+
   const router = useRouter();
 
   const onSubmit = async (data) => {
-    setLoding(true);
+    setLoading(true);
     try {
       const response = await fetch("/api/register", {
         method: "POST",
@@ -31,7 +32,7 @@ export default function SingUpForm() {
         },
       });
       const message = await response.json();
-      setLoding(false);
+      setLoading(false);
       window.scrollTo(0, 0);
       response.ok ? router.push("/success") : setError(message.message);
     } catch (err) {
@@ -42,7 +43,7 @@ export default function SingUpForm() {
     <div className="signup-form__wrapper">
       <h1 className="signup-form__title">Sign up for email updates</h1>
       <h2 className="signup-form__description">*Indicates Required Field</h2>
-        {error && <ErrorMessage error={error} />}
+      {error && <ErrorMessage error={error} />}
       <form className="signup-form" onSubmit={handleSubmit(onSubmit)}>
         <div className="signup-form__row">
           <div className="signup-form__col">
@@ -103,8 +104,12 @@ export default function SingUpForm() {
                       DropdownIndicator,
                     }}
                     options={[
-                      { value: "yes", label: "YES" , borderBottom:"1px solid #a1d2ce"},
-                      { value: "no", label: "NO", borderBottom:"uset" },
+                      {
+                        value: "yes",
+                        label: "YES",
+                        borderBottom: "1px solid #a1d2ce",
+                      },
+                      { value: "no", label: "NO", borderBottom: "uset" },
                     ]}
                   />
                 </>
@@ -150,8 +155,12 @@ export default function SingUpForm() {
           </div>
         </div>
         <div className="signup-form__action">
-          <button className="action__submit" type="submit">Submit</button>
-          <button className="action__rest" type="reset">Reset</button>
+          <button className="action__submit" type="submit">
+            Submit
+          </button>
+          <button className="action__rest" type="reset">
+            Reset
+          </button>
         </div>
       </form>
     </div>

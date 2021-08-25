@@ -26,8 +26,7 @@ export const inputTextInfo = {
   email: {
     name: "email",
     label: "EMAIL ADDRESS*",
-    pattern:
-      /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+    pattern:/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
     type: "email",
     required: true,
     errorRequired: "Email is required",
